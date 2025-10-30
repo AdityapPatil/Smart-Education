@@ -13,7 +13,7 @@
 
 Follow these steps to run the project locally 👇
 
-```bash
+bash
 # Clone this repository
 git clone https://github.com/AdityapPatil/Smart-Education.git
 
