@@ -3,8 +3,11 @@
 ## 🛠️ Tech Stack</h1>
 <p>
 Frontend: HTML, CSS, JavaScript (React.js or similar)  
+  <br/>
 Backend: Node.js, Express.js  
+  <br/>
 Database: MongoDB / MySQL (depending on your setup)  
+  <br/>
 Version Control: Git & GitHub  
 </p>
 
