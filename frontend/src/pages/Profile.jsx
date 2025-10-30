@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "lucide-react";
 
-function Profile() {
+const Profile = () => {
   const student = {
     name: "John Doe",
     email: "johndoe@example.com",
@@ -10,17 +10,22 @@ function Profile() {
     completedCourses: 2,
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 p-6 text-white">
-      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <User className="w-8 h-8" /> Profile
-      </h1>
+  const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(
+    student.name
+  )}&background=14B8A6&color=fff&size=100`;
 
-      <div className="glass p-6 rounded-2xl shadow-xl max-w-lg mx-auto">
-        <div className="flex flex-col items-center">
+  return (
+    <section className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 p-6 text-white">
+      <header className="mb-6 flex items-center gap-2">
+        <User className="w-8 h-8" />
+        <h1 className="text-3xl font-bold">Profile</h1>
+      </header>
+
+      <article className="glass p-6 rounded-2xl shadow-xl max-w-lg mx-auto">
+        <div className="flex flex-col items-center text-center">
           <img
-            src={`https://ui-avatars.com/api/?name=${student.name}&background=14B8A6&color=fff&size=100`}
-            alt="profile"
+            src={avatarUrl}
+            alt={`${student.name} profile`}
             className="w-24 h-24 rounded-full border-4 border-white mb-4"
           />
           <h2 className="text-2xl font-semibold">{student.name}</h2>
@@ -29,18 +34,22 @@ function Profile() {
         </div>
 
         <div className="mt-6 space-y-3">
-          <div className="bg-white/10 p-4 rounded-xl flex justify-between">
-            <span>Enrolled Courses</span>
-            <span>{student.enrolledCourses}</span>
-          </div>
-          <div className="bg-white/10 p-4 rounded-xl flex justify-between">
-            <span>Completed Courses</span>
-            <span>{student.completedCourses}</span>
-          </div>
+          {[
+            { label: "Enrolled Courses", value: student.enrolledCourses },
+            { label: "Completed Courses", value: student.completedCourses },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/10 p-4 rounded-xl flex justify-between"
+            >
+              <span>{item.label}</span>
+              <span>{item.value}</span>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
-}
+};
 
 export default Profile;
