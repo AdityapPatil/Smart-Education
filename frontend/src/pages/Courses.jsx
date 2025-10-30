@@ -2,22 +2,33 @@ import React from "react";
 import { BookOpen } from "lucide-react";
 import CourseCard from "../components/CourseCard";
 
-function Courses() {
+const Courses = () => {
+  const courseList = [
+    { title: "Mathematics", progress: 70 },
+    { title: "Physics", progress: 50 },
+    { title: "Chemistry", progress: 65 },
+    { title: "Computer Science", progress: 85 },
+    { title: "Biology", progress: 40 },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 p-6 text-white">
-      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <BookOpen className="w-8 h-8" /> Courses
-      </h1>
+    <section className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 p-6 text-white">
+      <header className="mb-6 flex items-center gap-2">
+        <BookOpen className="w-8 h-8" />
+        <h1 className="text-3xl font-bold">Courses</h1>
+      </header>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <CourseCard title="Mathematics" progress={70} />
-        <CourseCard title="Physics" progress={50} />
-        <CourseCard title="Chemistry" progress={65} />
-        <CourseCard title="Computer Science" progress={85} />
-        <CourseCard title="Biology" progress={40} />
+        {courseList.map((course, index) => (
+          <CourseCard
+            key={index}
+            title={course.title}
+            progress={course.progress}
+          />
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Courses;

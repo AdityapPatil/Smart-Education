@@ -75,16 +75,13 @@ export default function Login() {
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>
-<<<<<<< HEAD
       <div className="mt-4 text-sm text-slate-300">
         Don't have an account?{" "}
         <a href="/register" className="text-white underline">
           Register
         </a>
       </div>
-=======
       <div className="mt-4 text-sm text-slate-300">Don't have an account? <a href="/register" className="text-white underline">Register</a></div>
->>>>>>> 503afa675eaafbfb9de761b403637cf341cdc90c
       {error && <p className="text-red-400 mt-3">{error}</p>}
     </div>
     
