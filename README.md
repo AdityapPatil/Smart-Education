@@ -1,3 +1,35 @@
+# 🎓 Smart Education
+
+## 📘 Overview
+**Smart Education** is a full-stack web-based platform designed to enhance the learning experience through digital tools. It enables students and educators to connect, share knowledge, manage courses, and track learning progress in an interactive and user-friendly environment.
+
+---
+
+## 🚀 Features
+- 👨‍🏫 Student and Teacher login/registration
+- 📚 Course and subject management
+- 🧠 AI-assisted learning recommendations (optional)
+- 💬 Real-time discussion forums
+- 📊 Progress tracking and analytics dashboard
+- 📅 Assignment and exam scheduler
+
+---
+
+## 🛠️ Tech Stack
+**Frontend:** HTML, CSS, JavaScript (React or Vanilla JS)  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB / MySQL  
+**Version Control:** Git & GitHub  
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/AdityapPatil/Smart-Education.git
+cd Smart-Education
+
 <h1>
 
 ## 🛠️ Tech Stack</h1>
